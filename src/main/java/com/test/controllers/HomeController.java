@@ -25,6 +25,7 @@ public class HomeController {
 	public ResponseEntity<User> home()
 	{
 		User user=new User(2, "aman", this.bCryptPasswordEncoder.encode("aman123"), "ADMIN");
+		
 		this.userServices.saveUser(user);
 		
 		return ResponseEntity.ok(user);
